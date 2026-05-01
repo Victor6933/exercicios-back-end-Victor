@@ -1,0 +1,5 @@
+[
+    {"id":1, "nome": "celular", "preco": 1800, "estoque": 15}
+    {"id": 2, "nome": "Fone de Ouvido", "preco": 120, "estoque": 25},
+    {"id": 3, "nome": "Carregador", "preco: 80, "estoque": 25}
+]

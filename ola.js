@@ -177,3 +177,4 @@ const fichas = catalogoFilmes.map(f=>{
 
 console.log("\nFichas dos filmes:");
 fichas.forEach(f => console.log(f + "\n"));
+
