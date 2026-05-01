@@ -38,3 +38,29 @@ console.log("Análise da URL:);
     simularRequisicao("post", "/usuarios", { nome: "joão" });
     
     //3. Status HTTP
+    const sttusHTTP = {
+        200: "ok",
+        201: "Criado",
+        204: "Sem conteudo",
+        400: "Erro de requisição",
+        401: "Não autorizado",
+        403: "proibido",
+        404: "Não encontrado",
+        500: "Erro interno"
+    };
+
+    console.log("\nStatus HTTP;");
+    console.table(statusHTTP);
+
+    //4. Simulador de rotas
+    const usuarios = [
+        { id: 1, nome: "Ana"}
+        { id: 2, nome: "Carlos" }
+    ];
+
+    function servidor(metodo, rota) {
+        console.log('zn[${metodo}] ${rota}');
+
+        if (metodo === "get" && rota === "/usuarios/1")
+            console.log("Status: 200");
+    }
