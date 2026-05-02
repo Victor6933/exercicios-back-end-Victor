@@ -26,7 +26,7 @@ const rl = Readline.createInterface({
 
 //Menu
 function menu() {
-        console.log('
+        console.log(''
             === GameTracker ===
             1. Listar jogos
             2.Adicionar jogo
@@ -35,6 +35,6 @@ function menu() {
             5. Remover jogo
             6. Estatisticas
             7. Sair
-            ')
+            '')
 
 }
