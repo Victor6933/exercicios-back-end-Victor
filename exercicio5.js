@@ -15,13 +15,13 @@ function analisarURL(urlStr) {
 
 const exemplo =
 "https://api.exemplo.com:3000/produtos/123?categoria=eletronicos&ordem=preco#detalhes";
-console.log("Análise da URL:);
+console.log("Análise da URL:");
     console.log(analiarURL(exemplo));
 
     //2.simular requisição
     function simularRequesiçao(metodo,url,dados=null) {
         console.log("\n--- REQUISIÇÂO ---");
-        console.log("Método:,metodo);
+        console.log("Método:", metodo);
             console.log("URL:",url);
             if (dados) {
                 console.log("Body:", dados);
@@ -61,6 +61,48 @@ console.log("Análise da URL:);
     function servidor(metodo, rota) {
         console.log('zn[${metodo}] ${rota}');
 
-        if (metodo === "get" && rota === "/usuarios/1")
+        if (metodo === "get" && rota === "/usuarios/1"){ 
             console.log("Status: 200");
+        console.log(usuarios[0]);
     }
+    else if (metodo === "POST" && rota === "/usuarios") {
+        console.log("Status:201")
+        console.log("Usuário criado (simulado)");
+    }
+    else if (metodo === "DELETE" && rota === "/usuários/1") {
+        console.log("Status: 204");
+        console.log("Usuários removido");
+    }
+    else {
+        console.log("Status:404");
+        console.log("Rota não encontrada");
+    }
+}
+
+servidor("GET", "/usuarios");
+servidor("GET", "/usuarios/1");
+servidor("POST", "/usuarios");
+servidor("DELETE", "/usuarios/1");
+
+//5. Validar URL
+function urlValida(url) {
+    try{
+        new url(url);
+        return true;
+    } catch {
+        return false;
+    }
+}
+
+console.log("\nURL válida?",
+urlValida(exemplo));
+
+//6. Extrair query string
+function extrairQuery(urlStr) {
+    const url = new URL(urlStr);
+    return
+    Object.fromEntries(url.searchParams.entries());
+}
+
+console.log("\nParâmetros da URL:");
+console.log(extrairQuery(exemplo));
