@@ -92,12 +92,11 @@ const server = http.createServer((req, res) =>
 
    //Tratar erro de porta
    server.on('error', (err) => {
-    if (err.code === 'EADDRINUSE") {
-        console.log("Erro: porta 3000 já está em uso");
+        if (err.code === 'EADDRINUSE") {console.log("Erro: porta 3000 já está em uso");
    }
 });
 
 //Iniciar Servidor
-server.listen(port, () => {
+server.listen(port, () = {
     console.log('Servidor rodando em http://localhost:${PORT}');
 });

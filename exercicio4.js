@@ -35,7 +35,7 @@ function adicionarProduto(nome, preco, estoque)
 //buscar produto
 function buscarproduto(id) {
     const rpodutos = lerProdutos();
-    const produto = produtos.find(p => p.id === id);
+    const produto = produtos.find(p = p.id === id);
 
     id (produto) console.log(produto);
     else console.log("produto não encontrado");
@@ -44,7 +44,7 @@ function buscarproduto(id) {
 //Atualizar estoque
 function atualizarEstoque(id, quantidade) {
     const produtos = terprodutos();
-    const produto = produtos.find(p => p.id === id);
+    const produto = produtos.find(p = p.id === id);
     if(!produto) return console.log("produto não encontrado");
 
     console.log("Antes:", produto);
@@ -55,7 +55,7 @@ function atualizarEstoque(id, quantidade) {
 
 //Remover produto
 function removerProduto(id) {
-    const produtos = lerProdutos().filter(p => p.id !==id);
+    const produtos = lerProdutos().filter(p = p.id !==id);
     salvarprodutos(produtos);
     console.log("produto removido!");
 }
@@ -63,7 +63,7 @@ function removerProduto(id) {
 //produtos com estoque baixo
 function produtosemFalta(limite) {
     const produtos = lerprodutos();
-    const baixos =produtos.filter(p => p.estoque < limite);
+    const baixos =produtos.filter(p = p.estoque < limite);
 
     console.table(baixos);
     if (baixos.length > 0) {
