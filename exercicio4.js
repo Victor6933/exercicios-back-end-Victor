@@ -17,14 +17,14 @@ function listarprodutos() {
     const produtos = lerprodutos();
     console.table(produtios);
 
-    const total = produtos.reduce((soma, p) => soma + (p.preco * p.estoque), 0);
-    console.log("Total em estoque: R$, total);
+    const total = produtos.reduce((soma, p) = soma + (p.preco * p.estoque), 0);
+    console.log("Total em estoque: R$, total");
 }
 
 // Adicionar produto
 function adicionarProduto(nome, preco, estoque)
 {
-    const produtos = lerprodutos():
+    const produtos = lerprodutos();
     const novosId = produtos[produtos.length - 1].id + 1;
     produtos.push({ id: novosId,nome,preco, estoque});
     salvarprodutos(produtos);
@@ -37,7 +37,7 @@ function buscarproduto(id) {
     const rpodutos = lerProdutos();
     const produto = produtos.find(p = p.id === id);
 
-    id (produto) console.log(produto);
+    id (produto); console.log(produto);
     else console.log("produto não encontrado");
 }
 
