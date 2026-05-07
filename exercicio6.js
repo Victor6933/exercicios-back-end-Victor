@@ -14,7 +14,7 @@ const pokemon = [
     { id: 6, nome: "Charizard" }
 ];
 
-const server = http.createServer((req, res) =>
+const server = http.createServer((req, res) =
 {
     const parsedUrl = url.parse(req.url, true);
     const path = parsedUrl.pathname;
@@ -26,8 +26,8 @@ const server = http.createServer((req, res) =>
    //ROTA/
    if(path === "/") {
     res.writeHead(200, { "Content-Type": "text/html" });
-    res.end('
-        <h1>Meu Primeiro Servidor</h1>
+    res.end("
+        <h1>Meu Primeiro Servidor</h1> 
         <p>Bem-vindo!</p>
         <ul>
             <li><a href="/sobre">/sobre</a></li>
@@ -35,7 +35,7 @@ const server = http.createServer((req, res) =>
             <li><a href="/api/pokemon/1">/api/pokemon/1</a></li>
             <li><ahref="/produtos">/produtos</a></li>
             </ul>
-            ')
+            "")
     }
    // ROTA/api/hora
    else if (path === "/api/hora") {
@@ -92,7 +92,7 @@ const server = http.createServer((req, res) =>
 
    //Tratar erro de porta
    server.on('error', (err) => {
-        if (err.code === 'EADDRINUSE") {console.log("Erro: porta 3000 já está em uso");
+        if ("err.code === 'EADDRINUSE") {console.log("Erro: porta 3000 já está em uso");
    }
 });
 

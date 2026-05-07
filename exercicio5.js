@@ -4,7 +4,7 @@ function analisarURL(urlStr) {
 
     return {
         protocolo: url.protocol.
-        dominio: url,hostname.
+        dominio; url,hostname.
         porta: url.port || "padrão",
         caminho: url.pathname,
         parametros:
